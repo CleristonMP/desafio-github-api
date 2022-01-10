@@ -1,0 +1,19 @@
+.custom-home-container {
+padding: 30px 40px;
+margin: 0;
+}
+
+.custom-home-container button {
+    color: #fff;
+    width: 100px;
+}
+
+.custom-home-container h1 {
+    font-size: 48px;
+}
+
+.custom-home-container p {
+    font-size: 24px;
+    color: #7E7E7E;
+    margin-bottom: 30px;
+}

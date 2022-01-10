@@ -1,0 +1,27 @@
+.wrapper-container {
+  padding-top: 55px;
+}
+
+.container-fluid {
+  width: 86%;
+}
+
+.custom-perfil-container {
+  background: #e6f7ff;
+  border-radius: 16px;
+  padding: 55px 30px;
+}
+
+.custom-perfil-container h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.custom-perfil-container input {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.custom-perfil-container button {
+  color: #fff;
+}

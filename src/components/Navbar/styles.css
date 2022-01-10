@@ -1,0 +1,16 @@
+.custom-navbar {
+  background-color: #1890ff;
+  padding: 15px 40px;
+  height: 65px;
+  align-content: center;
+}
+
+.custom-container {
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+.custom-brand {
+    color: #fff;
+}
