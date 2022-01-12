@@ -5,13 +5,13 @@ type Props = {
   githubUser: GithubUser;
 };
 
-const ResultCard = () => {
+const ResultCard = ( { githubUser } : Props ) => {
   return (
     <div className="custom-result-container row">
       <div className="result-img-container col">
         <img
-          src="https://i.pinimg.com/736x/45/fd/23/45fd23068e0a98a7024b55012583ca24.jpg"
-          alt="Foto de gatinho fofo"
+          src={githubUser.avatar_url}
+          alt={`Foto de ${githubUser.name}`}
         />
       </div>
       <div className="result-content-container custom-border col-8">
@@ -19,19 +19,19 @@ const ResultCard = () => {
           <h2>Informações</h2>
           <div className="result-info custom-border">
             <h3>Perfil:</h3>
-            <p>http://www.teste.com.br</p>
+            <p>{githubUser.url}</p>
           </div>
           <div className="result-info custom-border">
             <h3>Seguidores:</h3>
-            <p>3654</p>
+            <p>{githubUser.followers}</p>
           </div>
           <div className="result-info custom-border">
             <h3>Localidade:</h3>
-            <p>País</p>
+            <p>{githubUser.location}</p>
           </div>
           <div className="result-info custom-border">
             <h3>Nome:</h3>
-            <p>Cidadão</p>
+            <p>{githubUser.name}</p>
           </div>
         </div>
       </div>

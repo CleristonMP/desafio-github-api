@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ResultCard from '../../components/ResultCard';
+import { GithubUser } from '../../components/types/githubUser';
 import './styles.css';
 
 type FormData = {
@@ -24,6 +25,14 @@ const Perfil = () => {
     console.log(formData);
   }
 
+  const user: GithubUser = {
+    avatar_url: "https://i.pinimg.com/736x/45/fd/23/45fd23068e0a98a7024b55012583ca24.jpg",
+    followers: 3654,
+    location: "Brasil",
+    name: "Cidadão Brasileiro",
+    url: "http://www.teste.com.br"
+  }
+
   return (
     <div className="wrapper-container">
       <div className="container-fluid">
@@ -46,7 +55,7 @@ const Perfil = () => {
         </div>
       </div>
       <div className="container-fluid">
-        <ResultCard />
+        <ResultCard githubUser={user} />
       </div>
     </div>
   );
