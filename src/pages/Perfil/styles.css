@@ -1,27 +1,31 @@
 .wrapper-container {
-  padding-top: 55px;
+  padding-top: 30px;
 }
 
 .container-fluid {
   width: 86%;
 }
 
-.custom-perfil-container {
+.custom-search-container {
   background: #e6f7ff;
   border-radius: 16px;
   padding: 55px 30px;
 }
 
-.custom-perfil-container h1 {
+.custom-search-container h1 {
   font-size: 38px;
   margin-bottom: 15px;
 }
 
-.custom-perfil-container input {
+.custom-search-container input {
   width: 300px;
   margin-bottom: 25px;
 }
 
-.custom-perfil-container button {
+.custom-search-container input::placeholder {
+  color: #c7c7c7;
+}
+
+.custom-search-container button {
   color: #fff;
 }
