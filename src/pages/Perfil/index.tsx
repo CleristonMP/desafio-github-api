@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import ResultCard from '../../components/ResultCard';
+import ResultCardLoader from '../../components/ResultCard/ResultCardLoader';
 import { GithubUser } from '../../components/types/githubUser';
 import './styles.css';
 
@@ -10,6 +11,7 @@ type FormData = {
 
 const Perfil = () => {
   const [githubUser, setGithubUser] = useState<GithubUser>();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState<FormData>({
     githubUser: '',
@@ -24,13 +26,19 @@ const Perfil = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    axios.get(`https://api.github.com/users/${formData.githubUser}`)
-    .then((response) => {
-      setGithubUser(response.data);
-    }).catch((error) => {
-      setGithubUser(undefined);
-      console.log(error);
-    });
+    setIsLoading(true);
+    axios
+      .get(`https://api.github.com/users/${formData.githubUser}`)
+      .then((response) => {
+        setGithubUser(response.data);
+      })
+      .catch((error) => {
+        setGithubUser(undefined);
+        console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -55,7 +63,7 @@ const Perfil = () => {
         </div>
       </div>
       <div className="container-fluid">
-        {githubUser && <ResultCard githubUser={githubUser} />}
+        {isLoading ? <ResultCardLoader /> : githubUser && <ResultCard githubUser={githubUser} />}
       </div>
     </div>
   );
