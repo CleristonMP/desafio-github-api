@@ -13,12 +13,12 @@
 }
 
 .custom-search-container h1 {
-  font-size: 38px;
+  font-size: 22px;
   margin-bottom: 15px;
 }
 
 .custom-search-container input {
-  width: 300px;
+  width: 100%;
   margin-bottom: 25px;
 }
 
@@ -28,4 +28,44 @@
 
 .custom-search-container button {
   color: #fff;
+}
+
+@media (min-width: 576px) {
+  .custom-search-container h1 {
+    font-size: 28px;
+  }
+
+  .custom-search-container input {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-search-container h1 {
+    font-size: 32px;
+  }
+
+  .custom-search-container input {
+    width: 55%;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-search-container h1 {
+    font-size: 36px;
+  }
+
+  .custom-search-container input {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-search-container h1 {
+    font-size: 38px;
+  }
+
+  .custom-search-container input {
+    width: 300px;
+  }
 }
